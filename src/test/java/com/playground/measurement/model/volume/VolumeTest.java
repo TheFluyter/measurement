@@ -8,9 +8,16 @@ class VolumeTest {
 
     @Test
     void sameVolumeType_shouldBeEqual() {
-        assertEquals(new Gallon(1.0), new Gallon(1.0));
-        assertEquals(new Quarts(1.0), new Quarts(1.0));
-        assertEquals(new Pints(1.0), new Pints(1.0));
-        assertEquals(new Cups(1.0), new Cups(1.0));
+        assertEquals(new Gallon(1), new Gallon(1));
+        assertEquals(new Quart(1), new Quart(1));
+        assertEquals(new Pint(1), new Pint(1));
+        assertEquals(new Cup(1), new Cup(1));
+    }
+
+    @Test
+    void differentVolumes_shouldBeEqual() {
+        assertEquals(new Gallon(1), new Quart(4));
+        assertEquals(new Quart(4), new Pint(8));
+        assertEquals(new Pint(8), new Cup(16));
     }
 }
