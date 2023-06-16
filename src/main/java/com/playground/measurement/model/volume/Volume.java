@@ -21,4 +21,9 @@ public abstract class Volume {
         hash = 31 * hash + amountInCups.intValue();
         return hash;
     }
+
+    @Override
+    public final String toString() {
+        return "Volume in cups is " + amountInCups;
+    }
 }

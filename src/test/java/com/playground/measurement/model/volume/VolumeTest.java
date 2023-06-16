@@ -19,5 +19,6 @@ class VolumeTest {
         assertEquals(new Gallon(1), new Quart(4));
         assertEquals(new Quart(4), new Pint(8));
         assertEquals(new Pint(8), new Cup(16));
+        assertEquals(new Quart(1), new Gallon(0.25));
     }
 }
